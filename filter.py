@@ -4,13 +4,16 @@ import spamdb
 import getopt
 import sys
 
+def usage():
+    print "-h,--help    Print Help Message\n"
+
 def main():
     try:
         opts, args = getopt.getopt(sys.argv[1:], "htf:y", 
             ["help", "train", "file=", "yes"])
     except getopt.GetoptError as err:
         # print help information and exit:
-        print str(err) # will print something like "option -a not recognized"
+        print str(err)
         usage()
         sys.exit(2)
     output = None
@@ -25,4 +28,7 @@ def main():
             output = a
         else:
             assert False, "unhandled option"
-    # ...
+
+
+if __name__ == "__main__":
+    main()
