@@ -21,8 +21,7 @@ def main():
         print str(err)
         usage()
         sys.exit(2)
-    output = None
-    verbose = False
+    # iterate over the prog args
     for o, a in opts:
         if o == "-t":
             training = True
@@ -35,7 +34,8 @@ def main():
             isSpam = True
         else:
             assert False, "unhandled option"
-
+    # begin program init
+    spamdb.initSpamDb()
 
 if __name__ == "__main__":
     main()

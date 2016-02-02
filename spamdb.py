@@ -2,7 +2,7 @@ import sqlite3
 
 # Init the spam database and loads this module up.
 def initSpamDb():
-
+    return True
 
 # key - the spam word
 # isSpam - is this word a spammy word.
