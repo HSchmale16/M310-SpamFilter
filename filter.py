@@ -1,11 +1,16 @@
 #!/usr/bin/python
 
-import spamdb
 import getopt
 import sys
+# Our modules
+import spamTest
+import spamParse
+import spamdb
 
 def usage():
-    print "-h,--help    Print Help Message\n"
+    print "-h,--help    Print this Help Message"
+    print "-t,--train   Train on a message read from file"
+    print "-f,--file=   The file to analyse"
 
 def main():
     try:
@@ -24,8 +29,10 @@ def main():
         elif o in ("-h", "--help"):
             usage()
             sys.exit()
-        elif o in ("-o", "--output"):
-            output = a
+        elif o in ("-f", "--file"):
+            fileName = a
+        elif o in ("-y", "--yes"):
+            isSpam = True
         else:
             assert False, "unhandled option"
 
