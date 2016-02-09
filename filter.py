@@ -11,6 +11,9 @@ def usage():
     print "-h,--help    Print this Help Message"
     print "-t,--train   Train on a message read from file"
     print "-f,--file=   The file to analyse"
+    print ""
+    print "The program will print out the spam value of an email"
+    print "spaminess in order for a shell script to determine it."
 
 def main():
     try:
