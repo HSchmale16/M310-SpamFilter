@@ -18,6 +18,7 @@ def initSpamDb():
 def updateSpamKey(key, isSpam):
     return key
 
+# TODO: IMPLEMENT ME!!!!
 # returns how spammy a word is from the database
 def getSpaminess(key):
     return 0.4
