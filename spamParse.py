@@ -1,11 +1,7 @@
 # Contains the spam parsing functions
-import email 
+import email
 
-msg = email.message
-
-from cStringIO import StringIO
-from email.generator import Generator
-fp = StringIO()
-g = Generator(fp,mangle_from_=Fasle, maxheaderlen=60)
-g.flatten(msg)
-text = fp.getvalue()
+# accepts a email formatted string and parses the message body into tokens
+# The tokens returned are lowercased and have punction striped from them.
+def tokenizeEmail(str):
+    return []

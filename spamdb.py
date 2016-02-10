@@ -10,7 +10,9 @@ CREATE TABLE IF NOT EXISTS SpamWords (
 
 # Init the spam database and loads this module up.
 def initSpamDb():
-    print SPAM_TBL_SQL
+    # The database connection is module global
+    global dbconn
+    dbconn = sqlite3.connect('spam.db');
     return True
 
 # key - the spam word
